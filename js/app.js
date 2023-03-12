@@ -28,11 +28,14 @@ const reportPost = (id) => {
   showPosts(remainingPosts);
 };
 
+
 const displayContent = (text) => {
   return text.length < 30
-    ? "text"
+    ? 'text'
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
+
+
 
 const switchTab = (id) => {
   if (id === "posts") {
@@ -115,7 +118,7 @@ const createPost = (post) => {
                   </button>
                 </div>
 
-                <div class="post__content">${postDescription}</div>
+                <div class="post__content">${displayContent(postDescription)}</div>
 
                 <div class="post__infos">
                   <div class="post__likes">
