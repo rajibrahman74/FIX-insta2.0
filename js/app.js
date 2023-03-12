@@ -58,6 +58,9 @@ const createPost = (post) => {
   const imagePost = post.image;
   const imageProfile = post.userImage;
   const postDescription = post.description;
+  // const postComments = post.comments[0].text;
+  // const psotUser = post.comments[0].user;
+  // console.log(postComments);
 
 
   const div = document.createElement("article");
@@ -130,9 +133,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0]?.user}
                       </a>
-                      ${post.comments?.text}
+                      ${post.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
